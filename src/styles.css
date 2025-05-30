@@ -103,6 +103,21 @@ nav ul li a:hover::after{
     display: flex;
     margin: 20px 0 40px;
 }
+.contents{
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+.icon{
+    color: #4FB477;
+}
+.contenido{
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.9;
+    margin-bottom: 3px;
+}
 .tab-links{
     margin-right: 50px;
     font-size: 18px;
@@ -129,7 +144,7 @@ nav ul li a:hover::after{
     transition: all 0.5s;
 }
 .tab-contents ul li span{
-    color: #b54769;
+    color: #4FB477;
     font-size: 14px;   
 }
 .tab-contents{
