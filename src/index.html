@@ -30,7 +30,7 @@
     </div>
     
 
-<!-- ---------------about------------------------- -->
+<!-- ---------------Sobre mi------------------------- -->
 
 
     <div id="about">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">Sobre mi</h1>
-                    <p>Soy una persona en formación en el mundo del desarrollo web, con conocimientos sólidos en HTML, CSS y JavaScript. Actualmente estoy enfocado 
+                    <p class="justify">Soy una persona en formación en el mundo del desarrollo web, con conocimientos sólidos en HTML, CSS y JavaScript. Actualmente estoy enfocado 
                         en mejorar mis habilidades construyendo páginas principales y aplicaciones funcionales como listas de tareas, quizz apps y aplicaciones del clima, utilizando solo JavaScript. <br><br>
 
                         También he comenzado a explorar herramientas modernas como Tailwind CSS, React y Next.js, aunque aún me encuentro en una etapa temprana de aprendizaje en esas tecnologías. 
@@ -52,7 +52,7 @@ Me considero curioso, autodidacta y con muchas ganas de seguir creciendo. Disfru
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
                         <p class="tab-links" onclick="opentab('experience')">Proyectos</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('education')">Educacion</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -96,28 +96,31 @@ Me considero curioso, autodidacta y con muchas ganas de seguir creciendo. Disfru
         </div>
     </div>
 
-<!-- ------------------SERVICES----------------------------  -->
+<!-- ------------------CONOCIMIENTOS----------------------------  -->
 <div id="services">
     <div class="container">
         <h1 class="sub-title">Mis Conocimientos</h1>
         <div class="services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Web design</h2>
-                <p>Enim eiusmod proident aliqua do ipsum laborum velit sint dolor aute culpa reprehenderit cillum ipsum.</p>
-                <a href="#">Learn more</a>
+                <h2>Desarrollo Web</h2>
+                <p class="justify">Conocimientos sólidos en HTML, CSS y JavaScript. Capaz de crear sitios responsivos y funcionales desde cero, 
+                    aplicando buenas prácticas de estructura y estilo.</p>
+                <a href="#">Ver mas</a>
             </div>
             <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UX/UI design</h2>
-                <p>Enim eiusmod proident aliqua do ipsum laborum velit sint dolor aute culpa reprehenderit cillum ipsum.</p>
-                <a href="#">Learn more</a>
+                <i class="fa-brands fa-css"></i>
+                <h2>Explorando Tailwind CSS</h2>
+                <p class="justify">He comenzado a experimentar con Tailwind CSS en proyectos personales. Estoy en proceso de aprender su utilidad 
+                    para crear diseños responsivos y estructurados con clases utilitarias.</p>
+                <a href="#">Ver mas</a>
             </div>
             <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App design</h2>
-                <p>Enim eiusmod proident aliqua do ipsum laborum velit sint dolor aute culpa reprehenderit cillum ipsum.</p>
-                <a href="#">Learn more</a>
+                <i class="fa-brands fa-js"></i>
+                <h2>Apps con JavaScript</h2>
+                <p class="justify">Desarrollo funcionalidades dinámicas con JavaScript vanilla, creando desde listas de tareas hasta apps 
+                    interactivas como quizzes o consumo de APIs para apps del clima, entre otras</p>
+                <a href="#">Ver mas</a>
             </div>
         </div>
     </div>
@@ -163,22 +166,26 @@ Me considero curioso, autodidacta y con muchas ganas de seguir creciendo. Disfru
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contactame</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> contact@example</p>
-                <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+                <p><i class="fa-solid fa-paper-plane"></i> bastidas.dcesar@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> <a class="number" href="https://wa.me/+5491132871814">+54 1132871814</a></p>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/CB2104" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i></i></a>
+                    <a href="https://wa.me/+5491132871814" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/cesar.dan21?ig" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/cesar-bastidas-204043328/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/CESAR D. BASTIDAS - CV.pdf" download class="btn btn2">Download CV</a>
+                <a href="images/CESAR D. BASTIDAS - CV.pdf" download class="btn btn2">Descargar CV</a>
             </div>  
             <div class="contact-right">
                 <form method="post" name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your e-mail" required>
-                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
-                    <button name="submit" type="submit" class="btn btn2">Submit</button>
+                    <input type="text" name="Name" placeholder="Nombre" required>
+                    <input type="email" name="Email" placeholder="Correo electronico" required>
+                    <textarea name="Message" rows="6" placeholder="Ingrese su mensaje"></textarea>
+                    <button name="submit" type="submit" class="btn btn2">Enviar</button>
                 </form>
                 <span id="msg"></span>
             </div>
