@@ -372,6 +372,12 @@ nav .fas{
         display: block;
         margin: 25px;
     }
+    
+    nav ul li:hover{
+        display: block;
+        margin: 25px;
+        color: #4FB477;
+    }
     nav ul .fas{
         position: absolute;
         top: 25px;
