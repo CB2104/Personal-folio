@@ -4,17 +4,39 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
+:root{
+    --primary-color: #080808;
+    --secundary-color: #fff;
+    --terciary-color: #ababab;
+    --primary-image: url(images/1.png);
+    --primary-responsive: url(images/11.png);
+}
+.dark-theme{
+    --primary-color: #fff;
+    --secundary-color: #080808;
+    --terciary-color: #414141;
+    --primary-image: url(images/2.png);
+    --primary-responsive: url(images/22.png);
+}
+
+
 html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--secundary-color);
 }
+#darkMode{
+    width: 30px;
+    cursor: pointer;
+}
+
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/1.png);
+    background-image: var(--primary-image);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,6 +44,10 @@ body{
 }
 .container{
     padding: 10px 10%;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
 }
 nav{
     display: flex;
@@ -38,7 +64,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: var(--secundary-color-color);
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -72,10 +98,10 @@ nav ul li a:hover::after{
     text-align: justify;
 }
 
-/* ------------ABOUT------------------ */
+/* ------------SOBRE MI------------------ */
 #about{
     padding: 80px 0;
-    color: #ababab;
+    color: var(--terciary-color);
 }
 .row{
     display: flex;
@@ -100,7 +126,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: var(--secundary-color);
 }
 .tab-titles{
     display: flex;
@@ -157,7 +183,7 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/* ----------------------SERVICES--------------------------*/
+/* ----------------------CONOCIMIENTOS--------------------------*/
 
 #services{
     padding: 30px 0;
@@ -175,6 +201,8 @@ nav ul li a:hover::after{
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    border: 1px solid #345511;
+    color: #fff;
 }
 .services-list div i{
     font-size: 50px;
@@ -187,19 +215,19 @@ nav ul li a:hover::after{
 }
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Etiqueta de Ver mas/Mis conocimientos */ 
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 .services-list div:hover{
     background: #345511;
-    box-shadow: 4px 4px 0 #fefefe;
+    box-shadow: 4px 4px 0 var(--secundary-color);
     transition: transform 0.2s, box-shadow 0.2s;
     transform: translateY(-10px);
 }
 
-/* ----------------------Portfolio--------------------------*/
+/* ----------------------TRABAJO--------------------------*/
 
 #portfolio{
     padding: 50px 0;
@@ -238,6 +266,7 @@ nav ul li a:hover::after{
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
+    color: #fff;
 }
 .layer h3{
     font-weight: 500;
@@ -269,11 +298,19 @@ nav ul li a:hover::after{
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: var(--secundary-color); /* Botones de Ver mas/CV/BOX */
     transition: background 0.5s;
+    color: #fff;
+}
+.btn.more{
+    color: var(--secundary-color);
+}
+.btn.more:hover{
+    color: #fff;
 }
 .btn:hover{
     background: #345511;
+    color: #cacaca;
 }
 
 /* ----------------------Contact--------------------------*/
@@ -299,7 +336,7 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: var(--terciary-color);
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -316,16 +353,16 @@ nav ul li a:hover::after{
 }
 .number{
     text-decoration: none;
-    color: #fff;
+    color: var(--secundary-color); 
 }
 form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: var(--terciary-color); /*Color de la baja del box*/
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: var(--primary-color); /* Color de las letras del box */
     font-size: 18px;
     border-radius: 6px;
     resize: none;
@@ -343,6 +380,7 @@ form .btn2{
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
+    color: #fff;
 }
 
 /* ----------------------css for small screens--------------------------*/
@@ -352,7 +390,7 @@ nav .fas{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/11.png);
+        background-image: var(--primary-responsive);
     }
     .header-text{
         margin-top: 100%;

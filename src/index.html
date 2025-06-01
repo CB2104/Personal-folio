@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo-dark.png" class="logo">
+                <img src="images/logo-dark.png" class="logo" id="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Inicio</a></li>
                     <li><a href="#about">Sobre mi</a></li>
@@ -21,10 +21,11 @@
                     <li><a href="#contact">Contacto</a></li>
                     <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <img src="images/sun_icon.png" id="darkMode">
                 <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Front-end Developer</p>
+                <p>Front-End Developer</p>
                 <h1>Hola, soy <span>Cesar</span> <br>Bastidas</h1>
             </div>
         </div>
@@ -46,19 +47,20 @@
                         crear interfaces limpias, funcionales y responsivas, desarrollando proyectos como listas de tareas, aplicaciones de 
                         preguntas y respuestas (quizz apps) y apps del clima, usando JavaScript puro. <br><br>
 
-Actualmente, estoy ampliando mis habilidades aprendiendo JavaScript avanzado, e iniciando mi camino con frameworks modernos como Tailwind CSS, 
-React y Next.js, lo que me permite acercarme a los estándares actuales del desarrollo frontend. <br><br>
+                        Actualmente, estoy ampliando mis habilidades aprendiendo JavaScript avanzado, e iniciando mi camino con frameworks 
+                        modernos como Tailwind CSS, React y Next.js, lo que me permite acercarme a los estándares actuales del desarrollo frontend. <br><br>
 
-Mi enfoque es autodidacta, curioso y orientado a la mejora continua. Disfruto enfrentar nuevos desafíos y estoy comprometido con escribir código 
-limpio, reutilizable y orientado a la experiencia del usuario. Próximamente, planeo incorporar Python a mi stack para ampliar mi perfil técnico. <br><br>
+                        Mi enfoque es autodidacta, curioso y orientado a la mejora continua. Disfruto enfrentar nuevos desafíos y estoy 
+                        comprometido con escribir código limpio, reutilizable y orientado a la experiencia del usuario. Próximamente, planeo 
+                        incorporar Python a mi stack para ampliar mi perfil técnico. <br><br>
 
-Estoy en constante aprendizaje y busco oportunidades donde pueda seguir creciendo como profesional mientras contribuyo con soluciones efectivas y 
-bien diseñadas.</p>
+                        Estoy en constante aprendizaje y busco oportunidades donde pueda seguir creciendo como profesional mientras contribuyo 
+                        con soluciones efectivas y bien diseñadas.</p>
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
                         <p class="tab-links" onclick="opentab('experience')">Proyectos</p>
-                        <p class="tab-links" onclick="opentab('education')">Educacion</p>
+                        <p class="tab-links" onclick="opentab('education')">Educación</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -164,7 +166,7 @@ bien diseñadas.</p>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">Ver mas</a>
+        <a href="#" class="btn more">Ver mas</a>
     </div>
 </div>
 
@@ -173,7 +175,7 @@ bien diseñadas.</p>
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contactame</h1>
+                <h1 class="sub-title">Contáctame</h1>
                 <p><i class="fa-solid fa-paper-plane"></i> bastidas.dcesar@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone"></i> <a class="number" href="https://wa.me/+5491132871814">+54 1132871814</a></p>
                 <div class="social-icons">
@@ -191,7 +193,7 @@ bien diseñadas.</p>
             <div class="contact-right">
                 <form method="post" name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Nombre" required>
-                    <input type="email" name="Email" placeholder="Correo electronico" required>
+                    <input type="email" name="Email" placeholder="Correo electrónico" required>
                     <textarea name="Message" rows="6" placeholder="Ingrese su mensaje"></textarea>
                     <button name="submit" type="submit" class="btn btn2">Enviar</button>
                 </form>
@@ -251,6 +253,23 @@ bien diseñadas.</p>
       })
       .catch(error => console.error('Error!', error.message))
   })
+</script>
+
+<script>
+
+    var darkMode = document.getElementById("darkMode")
+
+    darkMode.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            darkMode.src = "images/moon_icon.png";
+            logo.src = "images/logo.png";
+
+        }else{
+            darkMode.src = "images/sun_icon.png";
+            logo.src = "images/logo-dark.png";
+        }
+    }
 </script>
 
 </body>
