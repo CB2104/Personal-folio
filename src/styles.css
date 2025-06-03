@@ -11,6 +11,7 @@
     --terciary-color: #ababab;
     --primary-image: url(images/1.png);
     --primary-responsive: url(images/11.png);
+    --shadow-color: rgba(255, 255, 255, 0.19);
 }
 .dark-theme{
     --primary-color: #fff;
@@ -18,22 +19,25 @@
     --terciary-color: #414141;
     --primary-image: url(images/2.png);
     --primary-responsive: url(images/22.png);
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 
-html{
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background: var(--primary-color);
     color: var(--secundary-color);
 }
-#darkMode{
+
+#darkMode {
     width: 30px;
     cursor: pointer;
 }
 
-#header{
+#header {
     width: 100%;
     height: 100vh;
     background-image: var(--primary-image);
@@ -42,9 +46,90 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
-.container{
+
+.container {
     padding: 10px 10%;
 }
+
+
+
+/* NAVEGACIÓN PRINCIPAL */
+.sticky {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    width: 100%;
+    max-width: 1280px;
+    height: 54px;
+    padding: 0 10%;
+    background: transparent !important; /* Fondo completamente transparente al inicio */
+    transition: all 0.4s ease;
+}
+
+.sticky.scrolled {
+    background: var(--primary-color) !important; /* Fondo blanco al hacer scroll */
+    box-shadow: 0 2px 15px rgba(52, 85, 17, 0.688);
+    border-radius: 5px 5px ;
+}
+
+
+.sticky .logo {
+    transition: filter 0.4s ease;
+}
+
+
+/* Elementos del menú */
+.sticky ul li a {
+    color: var(--secundary-color); /* Texto blanco al inicio */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.sticky.scrolled ul li a {
+    color: var(--secundary-color); /* Texto negro al hacer scroll */
+}
+
+.sticky ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #345511;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: all 0.5s;
+}
+
+.sticky ul li a:hover::after {
+    width: 100%;
+}
+
+
+.sticky i, .sticky #darkMode {
+    color: white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.sticky.scrolled i, .sticky.scrolled #darkMode {
+    color: black;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    padding-top: 54px; 
+}
+
+
 nav ul{
     flex: 1;
     text-align: right;
@@ -399,6 +484,9 @@ nav .fas{
     .header-text h1{
         font-size: 30px;    
     }
+
+    
+
     nav .fas{
     display: block;
     font-size: 25px;

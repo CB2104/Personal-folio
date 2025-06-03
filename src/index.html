@@ -9,9 +9,9 @@
     <script src="https://kit.fontawesome.com/c5e7699a12.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
+    <div id="header" class="main-head">
         <div class="container">
-            <nav>
+            <nav class="sticky">
                 <img src="images/logo-dark.png" class="logo" id="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Inicio</a></li>
@@ -21,7 +21,7 @@
                     <li><a href="#contact">Contacto</a></li>
                     <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <img src="images/sun_icon.png" id="darkMode">
+                <img src="images/sun_icon.png" id="darkMode" class="logo">
                 <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
@@ -270,6 +270,30 @@
             logo.src = "images/logo-dark.png";
         }
     }
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.sticky');
+    const scrollPosition = window.scrollY;
+    const headerHeight = document.getElementById('header').offsetHeight;
+    
+    // Cambia cuando pasamos el 20% del alto del header
+    if (scrollPosition > headerHeight * 0.2) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Funciones para el menú móvil (las mantienes igual)
+function openmenu() {
+    document.getElementById('sidemenu').classList.add('active');
+}
+
+function closemenu() {
+    document.getElementById('sidemenu').classList.remove('active');
+}
 </script>
 
 </body>
