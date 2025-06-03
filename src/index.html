@@ -278,22 +278,12 @@
     const scrollPosition = window.scrollY;
     const headerHeight = document.getElementById('header').offsetHeight;
     
-    // Cambia cuando pasamos el 20% del alto del header
-    if (scrollPosition > headerHeight * 0.2) {
+    if (scrollPosition > headerHeight * 0.6) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
 });
-
-// Funciones para el menú móvil (las mantienes igual)
-function openmenu() {
-    document.getElementById('sidemenu').classList.add('active');
-}
-
-function closemenu() {
-    document.getElementById('sidemenu').classList.remove('active');
-}
 </script>
 
 </body>
