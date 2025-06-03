@@ -484,9 +484,27 @@ nav .fas{
     .header-text h1{
         font-size: 30px;    
     }
+    nav .fas.fa-bars {
+        color: var(--secundary-color) !important;
+        position: relative;
+    }
 
+    .sticky.scrolled nav .fas.fa-bars {
+        color: var(--secundary-color) !important;
+    }
+
+     nav ul#sidemenu {
+        background: #345511 !important; 
+    }
+
+    nav ul#sidemenu li a {
+        color: white !important; 
+    }
+
+    nav ul#sidemenu .fa-xmark {
+        color: white !important; 
+    }
     
-
     nav .fas{
     display: block;
     font-size: 25px;
