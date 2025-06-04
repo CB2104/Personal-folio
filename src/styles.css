@@ -470,8 +470,92 @@ form .btn2{
 nav .fas{
     display: none;
 }
+@media (min-width: 768px) and (max-width: 1000px){
+    #header{
+        background-image: var(--primary-image);
+    }
+    .header-text h1{
+        font-size: 30px;    
+    }
+    nav .fas.fa-bars {
+        color: var(--secundary-color) !important;
+        position: relative;
+    }
 
-@media only screen and (max-width: 950px){
+    .sticky.scrolled nav .fas.fa-bars {
+        color: var(--secundary-color) !important;
+    }
+
+     nav ul#sidemenu {
+        background: #345511 !important; 
+    }
+
+    nav ul#sidemenu li a {
+        color: white !important; 
+    }
+
+    nav ul#sidemenu .fa-xmark {
+        color: white !important; 
+    }
+    
+    nav .fas{
+    display: block;
+    font-size: 25px;
+    }
+    nav ul{
+        background: #345511;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    
+    nav ul li:hover{
+        display: block;
+        margin: 25px;
+        color: #4FB477;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+}
+
+
+
+@media only screen and (max-width: 700px){
     #header{
         background-image: var(--primary-responsive);
     }
