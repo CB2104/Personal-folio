@@ -33,7 +33,7 @@ body {
 }
 
 #darkMode {
-    width: 30px;
+    width: 40px;
     cursor: pointer;
 }
 
@@ -140,6 +140,11 @@ nav{
 }
 .logo{
     width: 140px;
+}
+.sun{
+    position: static;
+    padding: 1vh;
+    margin-left: 10vh;
 }
 nav ul li{
     display: inline-block;
