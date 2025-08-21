@@ -22,6 +22,35 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+/* -------------- */
+/* Transición para el body y todos los elementos */
+*, *::before, *::after {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Transiciones específicas para elementos comunes */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Para botones, cards, etc. */
+.card, .btn, header, nav, footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Para el ícono del darkMode */
+#darkMode {
+    transition: transform 0.2s ease;
+}
+
+#darkMode:hover {
+    transform: scale(1.1);
+}
+
+#darkMode, #logo {
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+/* -------------- */
 
 html {
     scroll-behavior: smooth;
@@ -322,7 +351,7 @@ nav ul li a:hover::after{
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     margin-top: 50px;
 }
@@ -373,11 +402,17 @@ nav ul li a:hover::after{
     text-align: center;
 }
 .work:hover img{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .work:hover .layer{
     height: 100%;
 }
+.work{
+    display: none;
+}
+.work:nth-child(1), .work:nth-child(2), .work:nth-child(3){
+    display: inline-block;
+}   
 .btn{
     display: block;
     margin: 50px auto;
