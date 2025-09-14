@@ -20,9 +20,9 @@
                 <a href="#header"><img src="images/logo-dark.png" class="logo" id="logo"></a>
                 <ul id="sidemenu">
                     <li><a href="#header">Inicio</a></li>
-                    <li><a href="#about">Sobre mi</a></li>
-                    <li><a href="#Conocimientos">Conocimientos</a></li>
                     <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#Conocimientos">Conocimientos</a></li>
+                    <li><a href="#about">Sobre mi</a></li>
                     <li><a href="#contact">Contacto</a></li>
                     <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
@@ -36,9 +36,157 @@
         </div>
     </div>
     
+<!-- ------------------Portfolio----------------------------  -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Mi trabajo</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Clima-Work.png" alt="Clima-Preview">
+                <div class="layer">
+                    <h3>App del clima</h3>
+                    <p>App basada en JS, que te permite consultar el clima en cualquier ciudad del mundo</p>
+                    <a href="https://clima-test-inky.vercel.app" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Landing-Work.png" alt="LandingPage-Preview">
+                <div class="layer">
+                    <h3>Landing page</h3>
+                    <p>Modelo basico de pagina hecha en HTML y CSS puro para un eCommerce sencillo</p>
+                    <a href="https://landing-test-one-liart.vercel.app" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Shoes-EcommerceEdit.jpg"  alt="ShoesEcommerce-Preview">
+                <div class="layer">
+                    <h3>Landing page</h3>
+                    <p>Modelo de landing-page desarrollado en JavaScript vanila para una zapateria virtual</p>
+                    <a href="https://shoes-ecommerce-self.vercel.app" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Music-Work.jpg" alt="Music-Preview">
+                <div class="layer">
+                    <h3>App de musica</h3>
+                    <p>App desarrolada con JavaScript y apoyo de HTML/CSS como reproductor de musica</p>
+                    <a href="https://music-app-v1-one.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Test-Work.png" alt="Test-Previe">
+                <div class="layer">
+                    <h3>Quizz App</h3>
+                    <p>App basada en JS, que te permite realizar breves cuestionarios y basarlos en un puntaje en base a la prueba y error</p>
+                    <a href="https://app-quizz-rosy.vercel.app" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ToDo-Work.png" alt="ToDo-Preview">
+                <div class="layer">
+                    <h3>Lista de Tareas</h3>
+                    <p>Web-app desarrollada con JS vanilla junto a HTML y CSS</p>
+                    <a href="https://to-do-list-omega-one-10.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Calc-Mockup.png" alt="Calculador-Preview">
+                <div class="layer">
+                    <h3>Calculadora</h3>
+                    <p>Web-app desarrollada con JS vanilla junto a HTML y CSS para el diseño basico de una calculadora</p>
+                    <a href="https://calculadora-v1-nu.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+           <div class="work">
+                <img src="images/work33.png" alt="">
+                <div class="layer">
+                    <h3>Proximamente mas...</h3>
+                    <p>Mas proyectos practicos en camino... ⚒</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work33.png" alt="">
+                <div class="layer">
+                    <h3>Proximamente mas...</h3>
+                    <p>Mas proyectos practicos en camino... ⚒</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work33.png" alt="">
+                <div class="layer">
+                    <h3>Proximamente mas...</h3>
+                    <p>Mas proyectos practicos en camino... ⚒</p>
+                </div>
+            </div> 
+        </div>
+            
+        <div id="load-more" class="btn more">Ver mas</div>
+    </div>
+    <div id="Conocimientos"></div>  
+</div>
+
+<Script>
+    let loadMoreBtn = document.querySelector('#load-more');
+    let currentItem = 3;
+
+    loadMoreBtn.onclick = () =>{
+        let boxes = [...document.querySelectorAll('.work')];
+        for (var i = currentItem; i < currentItem + 3; i++){
+            boxes[i].style.display = 'inline-block';
+            boxes[i].style.opacity = '0';
+            boxes[i].style.transition = 'opacity 3s ease';
+            
+            // Forzar al navegador a procesar los cambios
+            boxes[i].offsetHeight; // Esta línea fuerza el reflow
+            
+            // Ahora animar
+            boxes[i].style.opacity = '1';
+        }
+        currentItem += 3;
+
+        if(currentItem >= boxes.length){
+            loadMoreBtn.style.display = 'none';
+        }
+    }
+</Script>
+
+<div id="Conocimientos">
+</div>
+<!-- ------------------CONOCIMIENTOS----------------------------  -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Mis Conocimientos</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Desarrollo Web</h2>
+                <p class="justify">Conocimientos sólidos en HTML, CSS y JavaScript. Capaz de crear sitios responsivos y funcionales desde cero, 
+                    aplicando buenas prácticas de estructura y estilo.</p>
+                
+            </div>
+            <div>
+                <i class="fa-brands fa-css"></i>
+                <h2>Explorando Tailwind CSS</h2>
+                <p class="justify">He comenzado a experimentar con Tailwind CSS en proyectos personales. Estoy en proceso de aprender su utilidad 
+                    para crear diseños responsivos y estructurados con clases utilitarias.</p>
+                
+            </div>
+            <div>
+                <i class="fa-brands fa-js"></i>
+                <h2>Apps con JavaScript</h2>
+                <p class="justify">Desarrollo funcionalidades dinámicas con JavaScript vanilla, creando desde listas de tareas hasta apps 
+                    interactivas como quizzes o consumo de APIs para apps del clima, entre otras</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ---------------Sobre mi------------------------- -->
-
 
     <div id="about">
         <div class="container">
@@ -73,7 +221,7 @@
                                 <i class="fa-solid fa-file-code"></i> HTML/CSS <br>
                                 <i class="fa-brands fa-js"></i> JavaScript (Vainilla) <br>
                                 <i class="fa-brands fa-git-alt"></i> Git & GitHub</div></li>
-                            <li><span>TECNOLOGIAS QUE ESTOY APRENDIENDO</span><div class="contents">
+                            <li><span>ACTUALMENTE CURSANDO</span><div class="contents">
                                 <i class="fa-brands fa-css"></i> Tailwind CSS <br>
                                 <i class="fa-brands fa-react"></i> React.js/Next.js <br>
                                 <i class="fa-brands fa-python"></i> Python</div></li>
@@ -106,134 +254,9 @@
                     </div>               
                 </div>
             </div>
-            <div id="Conocimientos">
-</div>
         </div>
     </div>
-<div id="Conocimientos">
-</div>
-<!-- ------------------CONOCIMIENTOS----------------------------  -->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">Mis Conocimientos</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Desarrollo Web</h2>
-                <p class="justify">Conocimientos sólidos en HTML, CSS y JavaScript. Capaz de crear sitios responsivos y funcionales desde cero, 
-                    aplicando buenas prácticas de estructura y estilo.</p>
-                
-            </div>
-            <div>
-                <i class="fa-brands fa-css"></i>
-                <h2>Explorando Tailwind CSS</h2>
-                <p class="justify">He comenzado a experimentar con Tailwind CSS en proyectos personales. Estoy en proceso de aprender su utilidad 
-                    para crear diseños responsivos y estructurados con clases utilitarias.</p>
-                
-            </div>
-            <div>
-                <i class="fa-brands fa-js"></i>
-                <h2>Apps con JavaScript</h2>
-                <p class="justify">Desarrollo funcionalidades dinámicas con JavaScript vanilla, creando desde listas de tareas hasta apps 
-                    interactivas como quizzes o consumo de APIs para apps del clima, entre otras</p>
-                
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- ------------------Portfolio----------------------------  -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">Mi trabajo</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/Clima-Work.png" alt="Clima-Preview">
-                <div class="layer">
-                    <h3>App del clima</h3>
-                    <p>App basada en JS, que te permite consultar el clima en cualquier ciudad del mundo</p>
-                    <a href="https://clima-test-inky.vercel.app" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Music-Work.jpg" alt="Music-Preview">
-                <div class="layer">
-                    <h3>App de musica</h3>
-                    <p>App desarrolada con JavaScript y apoyo de HTML/CSS como reproductor de musica</p>
-                    <a href="https://music-app-v1-one.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Landing-Work.png" alt="LandingPage-Preview">
-                <div class="layer">
-                    <h3>Landing page</h3>
-                    <p>Modelo basico de pagina hecha en HTML y CSS puro para un eCommerce sencillo</p>
-                    <a href="https://landing-test-one-liart.vercel.app" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Test-Work.png" alt="Test-Previe">
-                <div class="layer">
-                    <h3>Quizz App</h3>
-                    <p>App basada en JS, que te permite realizar breves cuestionarios y basarlos en un puntaje en base a la prueba y error</p>
-                    <a href="https://app-quizz-rosy.vercel.app" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/ToDo-Work.png" alt="ToDo-Preview">
-                <div class="layer">
-                    <h3>Lista de Tareas</h3>
-                    <p>Web-app desarrollada con JS vanilla junto a HTML y CSS</p>
-                    <a href="https://to-do-list-omega-one-10.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Calc-Mockup.png" alt="Calculador-Preview">
-                <div class="layer">
-                    <h3>Calculadora</h3>
-                    <p>Web-app desarrollada con JS vanilla junto a HTML y CSS para el diseño basico de una calculadora</p>
-                    <a href="https://calculadora-v1-nu.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work33.png" alt="">
-                <div class="layer">
-                    <h3>Proximamente mas...</h3>
-                    <p>Mas proyectos practicos en camino... ⚒</p>
-                </div>
-            </div>
-        </div>
-        <div id="load-more" class="btn more">Ver mas</div>
-    </div>
-</div>
-
-<Script>
-    let loadMoreBtn = document.querySelector('#load-more');
-    let currentItem = 3;
-
-    loadMoreBtn.onclick = () =>{
-        let boxes = [...document.querySelectorAll('.work')];
-        for (var i = currentItem; i < currentItem + 3; i++){
-            boxes[i].style.display = 'inline-block';
-            boxes[i].style.opacity = '0';
-            boxes[i].style.transition = 'opacity 3s ease';
-            
-            // Forzar al navegador a procesar los cambios
-            boxes[i].offsetHeight; // Esta línea fuerza el reflow
-            
-            // Ahora animar
-            boxes[i].style.opacity = '1';
-        }
-        currentItem += 3;
-
-        if(currentItem >= boxes.length){
-            loadMoreBtn.style.display = 'none';
-        }
-    }
-</Script>
 
 <!-- ------------------Contact----------------------------  -->
 <div id="contact">
@@ -253,7 +276,7 @@
                     <a href="https://www.linkedin.com/in/cesar-bastidas-204043328/" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/CV-CesarBastidas.pdf" download class="btn btn2">Descargar CV</a>
+                <a href="images/CESAR BASTIDAS - CV (2).pdf" target="_blank" class="btn btn2">Descargar CV</a>
             </div>  
             <div class="contact-right">
                 <form method="post" name="submit-to-google-sheet">
