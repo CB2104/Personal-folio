@@ -114,13 +114,6 @@
                     <h3>Proximamente mas...</h3>
                     <p>Mas proyectos practicos en camino... ⚒</p>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/work33.png" alt="">
-                <div class="layer">
-                    <h3>Proximamente mas...</h3>
-                    <p>Mas proyectos practicos en camino... ⚒</p>
-                </div>
             </div> 
         </div>
             
@@ -196,20 +189,17 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">Sobre mi</h1><br>
-                    <p class="justify">Soy un desarrollador web en formación con una sólida base en HTML, CSS y JavaScript. Me especializo en 
-                        crear interfaces limpias, funcionales y responsivas, desarrollando proyectos como listas de tareas, aplicaciones de 
-                        preguntas y respuestas (quizz apps) y apps del clima, usando JavaScript puro. <br><br>
-
-                        Actualmente, estoy ampliando mis habilidades aprendiendo JavaScript avanzado, e iniciando mi camino con frameworks 
-                        modernos como Tailwind CSS, React y Next.js, lo que me permite acercarme a los estándares actuales del desarrollo frontend. <br><br>
-
-                        Mi enfoque es autodidacta, curioso y orientado a la mejora continua. Disfruto enfrentar nuevos desafíos y estoy 
-                        comprometido con escribir código limpio, reutilizable y orientado a la experiencia del usuario. Próximamente, planeo 
-                        incorporar Python a mi stack para ampliar mi perfil técnico. <br><br>
-
-                        Estoy en constante aprendizaje y busco oportunidades donde pueda seguir creciendo como profesional mientras contribuyo 
-                        con soluciones efectivas y bien diseñadas.</p>
-                    
+                    <p class="justify">
+                        Soy un desarrollador web en formación con una base firme en HTML, CSS y JavaScript (vanilla). He creado proyectos personales que me han permitido 
+                        aplicar esos conocimientos en la práctica: listas de tareas, apps de preguntas (quizzes), apps del clima, landing pages, y más.  <br><br/>
+                        En mi día a día, sigo aprendiendo y expandiendo mi stack: uso Bootstrap y Tailwind CSS para diseño, y estoy en camino hacia React, Node.js y Next.js 
+                        para construir aplicaciones más robustas.
+                        A mediano y largo plazo, quiero internarme también en React Native y trabajar con herramientas de línea de comandos (CLI), para diversificar mi perfil
+                         hacia lo móvil y utilitarios. <br/><br>
+                        Me considero una persona autodidacta, curiosa y orientada a la mejora continua. Me motiva enfrentar nuevos retos, experimentar con nuevas tecnologías 
+                        y pulir cada vez más la calidad de mi código: que sea claro, reutilizable y centrado en la experiencia del usuario. <br><br>
+                        Aunque aún estoy en proceso de formación y no cuento con experiencia laboral formal en el sector, estoy abierto a oportunidades de aprendizaje que me 
+                        permitan ganar experiencia práctica y aportar con ideas frescas y soluciones bien pensadas.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
                         <p class="tab-links" onclick="opentab('experience')">Proyectos</p>
@@ -224,7 +214,7 @@
                             <li><span>ACTUALMENTE CURSANDO</span><div class="contents">
                                 <i class="fa-brands fa-css"></i> Tailwind CSS <br>
                                 <i class="fa-brands fa-react"></i> React.js/Next.js <br>
-                                <i class="fa-brands fa-python"></i> Python</div></li>
+                                <i class="fa-brands fa-node-js"></i> Node.js</div></li>
                             
                            <!-- <li><span>Git & GitHub</span><br>Building Android/iOS apps</li> -->
 
@@ -276,7 +266,7 @@
                     <a href="https://www.linkedin.com/in/cesar-bastidas-204043328/" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/CESAR BASTIDAS - CV (2).pdf" target="_blank" class="btn btn2">Descargar CV</a>
+                <a href="images/BASTIDAS - CV.pdf" target="_blank" class="btn btn2">Abrir CV</a>
             </div>  
             <div class="contact-right">
                 <form method="post" name="submit-to-google-sheet">
@@ -290,7 +280,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright © Cesar ⇹ Con <i class="fa-solid fa-heart"></i> a JCBG </p>
+        <p>Actualizado: Octubre 2025 © Cesar ⇹ Con <i class="fa-solid fa-heart"></i> a JCBG </p>
     </div>
 </div>
 
@@ -345,30 +335,62 @@
 
 <script>
     var darkMode = document.getElementById("darkMode");
-    var logo = document.getElementById("logo");
+var logo = document.getElementById("logo");
 
-    darkMode.onclick = function(){
-        // Fade out de las imágenes
-        darkMode.style.opacity = '0.5';
-        logo.style.opacity = '0.1';
-        
-        document.body.classList.toggle("dark-theme");
-        
-        // Cambiar imágenes y fade in
-        setTimeout(() => {
-            if(document.body.classList.contains("dark-theme")){
-                darkMode.src = "images/moon_icon.png";
-                logo.src = "images/logo.png";
-            }else{
-                darkMode.src = "images/sun_icon.png";
-                logo.src = "images/logo-dark.png";
-            }
-            
-            // Fade in
-            darkMode.style.opacity = '1';
-            logo.style.opacity = '1';
-        }, 150);
+// Función para cambiar el tema
+function toggleTheme() {
+    // Fade out de las imágenes
+    darkMode.style.opacity = '0.5';
+    logo.style.opacity = '0.1';
+    
+    document.body.classList.toggle("dark-theme");
+    
+    // Guardar la preferencia en localStorage
+    if(document.body.classList.contains("dark-theme")){
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
     }
+    
+    // Cambiar imágenes y fade in
+    setTimeout(() => {
+        if(document.body.classList.contains("dark-theme")){
+            darkMode.src = "images/moon_icon.png";
+            logo.src = "images/logo.png";
+        } else {
+            darkMode.src = "images/sun_icon.png";
+            logo.src = "images/logo-dark.png";
+        }
+        
+        // Fade in
+        darkMode.style.opacity = '1';
+        logo.style.opacity = '1';
+    }, 150);
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    
+    if(savedTheme === "dark"){
+        document.body.classList.add("dark-theme");
+        darkMode.src = "images/moon_icon.png";
+        logo.src = "images/logo.png";
+    } else {
+        // Por defecto tema claro
+        darkMode.src = "images/sun_icon.png";
+        logo.src = "images/logo-dark.png";
+        
+        if(!savedTheme){
+            localStorage.setItem("theme", "dark");
+        }
+    }
+}
+
+// Cargar el tema al iniciar
+loadTheme();
+
+// Asignar el evento click
+darkMode.onclick = toggleTheme;
 </script>
 
 <script>
