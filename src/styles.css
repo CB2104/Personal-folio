@@ -389,7 +389,12 @@ nav ul li a:hover::after{
     font-weight: 500;
     margin-bottom: 20px;
 }
-.layer a{
+.links-box{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.links-box a{
     margin-top: 20px;
     color: #345511;
     text-decoration: none;
